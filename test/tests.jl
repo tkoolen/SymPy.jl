@@ -223,7 +223,7 @@ end
     a = [x 1; 1 x]
     b = [x 1 2; 1 2 x]
 
-    const DIMERROR = VERSION < v"0.4.0-dev" ? ErrorException : DimensionMismatch
+    const DIMERROR = ? ErrorException : DimensionMismatch
     const DimensionOrMethodError =  Union{MethodError, DimensionMismatch}
     ## scalar, [vector, matrix]
     @test s + v == [x+3, 4]
